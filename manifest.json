@@ -1,0 +1,29 @@
+{
+    "name": "Let Me See!",
+    "version": "0.1",
+    "description": "This Google Chrome extension allows users to access and read information about selected words or phrases.",
+    "manifest_version": 2,
+    "icons": {
+        "16": "icon16.png",
+        "48": "icon48.png",
+        "128": "icon128.png"
+    },
+    "browser_action": {
+        "default_title": "Let Me See!",
+        "default_icon": "icon48.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs",
+        "activeTab",
+        "<all_urls>"
+    ],
+    "content_scripts": [
+    {
+        "matches": ["<all_urls>"],
+        "js": ["content_script.js"],
+        "run_at": "document_start",
+        "all_frames": false
+    }
+  ]
+}

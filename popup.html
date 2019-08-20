@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Integration of stylesheet -->
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Let Me See!</title>
+    </head>
+    <body>
+        <main>
+            <h1>Let Me See!</h1>
+            <div style="width: 500px; height: 14px; float:left; display:inline-block"></div>
+
+            <input id="wiki_tab" type="radio" name="tabs" checked>
+            <label for="wiki_tab">Wikipedia</label>
+            <input id="wolfram_tab" type="radio" name="tabs">
+            <label for="wolfram_tab">WolframAlpha</label>
+            <input id="reddit_tab" type="radio" name="tabs">
+            <label for="reddit_tab">Reddit</label>
+
+            <section id="wiki_slide">
+                <div id="wiki_content"></div>
+                <div style="width: 500px; height: 30px; float:left; display:inline-block"></div>
+                <a id="wiki_button"  target="_blank" href="https://www.wikipedia.org" class="visual_button">Go to Wikipedia</a>
+            </section>
+            <section id="wolfram_slide">
+                <div id="wolfram_content"></div>
+                <div style="width: 500px; height: 30px; float:left; display:inline-block"></div>
+                <a id="wolfram_button"  target="_blank" href="https://www.wolframalpha.com" class="visual_button">Go to WolframAlpha</a>
+                <div style="width: 500px; height: 10px; float:left; display:inline-block"></div>
+                <a id="wolfram_pro" target="_blank" href="https://www.wolframalpha.com/pro/" class="visual_button">Sign up for Wolfram Alpha Pro!</a>
+            </section>
+            <section id="reddit_slide">
+                <div id="reddit_content"></div>
+                <div style="width: 500px; height: 14px; float:left; display:inline-block"></div>
+                <a id="reddit_button"  target="_blank" href="https://www.reddit.com" class="visual_button">Go to Reddit</a>
+            </section>
+        </main>
+    </body>
+    <!-- Integration of JQuery script and our Javascript in "popup.js" -->
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="popup.js"></script>
+</html>

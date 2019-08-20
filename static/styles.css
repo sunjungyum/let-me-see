@@ -1,0 +1,171 @@
+/* Large amount of CSS based off of https://codepen.io/oknoblich/pen/tfjFl/ */
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,700");
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+@import url("https://fonts.googleapis.com/css?family=Proxima+Nova");
+@import url("https://fonts.googleapis.com/css?family=Cormorant+Garamond");
+
+*,*::before,*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    max-height: 600px;
+    max-width: 500px;
+}
+
+h1 {
+    font-family: "Montserrat";
+    font-size: 30px;
+}
+
+h3 {
+    font-family: "Cormorant+Garamond";
+    font-size: 20px;
+}
+
+body {
+    display: flex;
+    text-align: center;
+    padding: 20px;
+    font: 14px/1.5 "Open Sans", sans-serif;
+    color: #345;
+    background: #f0f2f4;
+}
+
+p:not(:last-child) {
+    margin: 0 0 20px;
+}
+
+main {
+    width: 99%;
+    margin: auto;
+    height: 98%;
+    padding: 25px;
+    border: 1px solid rgba(0, 0, 0, .2);
+    background: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .1);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+section {
+    display: none;
+    padding: 20px 0 0;
+}
+
+input {
+    display: none;
+}
+
+img {
+  max-width: 98%;
+}
+
+br {
+  display: block;
+  margin: 20px 0;
+}
+
+label {
+    display: inline-block;
+    margin: 0 0 -1px;
+    padding: 10px 25px;
+    font-weight: 600;
+    text-align: center;
+    color: #abc;
+    border: 1px solid transparent;
+    border-bottom: 1px solid #abc;
+}
+
+label:before {
+    font-family: "fontawesome";
+    font-weight: normal;
+    margin-right: 10px;
+}
+
+label[for*='wiki_tab']:before { content: "\f266"; }
+label[for*='wolfram_tab']:before { content: "\f080"; }
+label[for*='reddit_tab']:before { content: "\f281"; }
+
+
+label:hover {
+    color: #789;
+    cursor: pointer;
+}
+
+input:checked + label {
+    color: #0af;
+    border: 1px solid #abc;
+    border-top: 2px solid #0af;
+    border-bottom: 1px solid #fff;
+}
+
+#wiki_tab:checked ~ #wiki_slide,
+#wolfram_tab:checked ~ #wolfram_slide,
+#reddit_tab:checked ~ #reddit_slide {
+    display: block;
+}
+
+@media screen and (max-width: 200px) {
+    label {
+        font-size: 0;
+    }
+    label:before {
+        margin: 0;
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    label {
+        padding: 10px;
+    }
+}
+
+/* Button CSS based off of https://www.youtube.com/watch?v=1_T_eYGNUHw */
+a {
+    text-decoration: inherit;
+}
+
+.visual_button, .visual_button_2, .visual_button_3 {
+    font-weight: 100;
+    text-align: center;
+    border-radius: 40px;
+    white-space: normal;
+    display: inline-block;
+}
+
+.visual_button {
+    font-size: 16px;
+    color: #0af;
+    border: solid 2px #0af;
+    padding: 10px 80px;
+}
+
+.visual_button_2 {
+    font-size: 14px;
+    border: solid transparent 2px;
+    padding: 15px 15px;
+    color: #345;
+}
+
+.visual_button_3 {
+    font-size: 14px;
+    border: solid 2px #0af;
+    padding: 10px 15px;
+    color: #345;
+}
+
+.visual_button:hover, .visual_button_3:hover {
+    background-color: #0af;
+    color: #fff;
+}
+
+.visual_button_2:hover {
+    border: solid 2px #0af;
+    border-radius: 40px;
+}
